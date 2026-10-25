@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truco Argentino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="tablero">
+    <!-- Marcador de Puntos -->
+    <header class="marcador">
+      <div class="puntos-box">
+        <span>NOSOTROS:</span>
+        <strong id="pts-jugador">0</strong>
+      </div>
+      <h2>TRUCO</h2>
+      <div class="puntos-box">
+        <span>ELLOS (BOT):</span>
+        <strong id="pts-bot">0</strong>
+      </div>
+    </header>
+
+    <!-- Zona del Bot -->
+    <section class="zona-jugador bot">
+      <h3>Rival (Bot)</h3>
+      <div id="cartas-bot" class="mano"></div>
+    </section>
+
+    <!-- Mesa Central -->
+    <main class="mesa">
+      <div id="log-mensajes" class="log-mensajes">¡Comienza la partida!</div>
+      
+      <div class="campo-juego">
+        <div class="lado-campo">
+          <small>Mesa Bot</small>
+          <div id="mesa-bot" class="cartas-jugadas"></div>
+        </div>
+        <div class="lado-campo">
+          <small>Tu Mesa</small>
+          <div id="mesa-jugador" class="cartas-jugadas"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Zona del Jugador Humano -->
+    <section class="zona-jugador humano">
+      <div id="panel-cantos" class="panel-cantos">
+        <button id="btn-envido" class="btn-canto">Envido</button>
+        <button id="btn-truco" class="btn-canto">Truco</button>
+        <button id="btn-ir-al-mazo" class="btn-canto peligro">Mazo</button>
+      </div>
+      <div id="cartas-jugador" class="mano"></div>
+      <h3>Tus Cartas</h3>
+    </section>
+  </div>
+
+  <!-- Importante: type="module" para poder usar import/export -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
